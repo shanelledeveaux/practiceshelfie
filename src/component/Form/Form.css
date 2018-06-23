@@ -1,0 +1,18 @@
+.form {
+  height: 30vh;
+  width: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: purple;
+  padding: 5%;
+  color: white;
+  /* align-content: flex-end; */
+}
+
+.btncontr {
+  height: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
