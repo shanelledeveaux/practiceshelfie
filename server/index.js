@@ -12,6 +12,7 @@ massive(process.env.CONNECTION_STRING).then(dbInstance =>
 );
 
 app.get("/api/inventory", mc.getInventory);
+app.post("/api/product", mc.addProduct);
 
 const port = 3001;
 app.listen(port, () => {

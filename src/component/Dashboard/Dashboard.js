@@ -1,28 +1,18 @@
 import React, { Component } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 import Product from "../Product/Product";
 
 class Dashboard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
-    this.state = {
-      inventory: []
-    };
-  }
-  componentDidMount() {
-    this.getInventory();
+    this.state = {};
   }
 
-  getInventory() {
-    axios.get(`/api/inventory`).then(res => {
-      this.setState({ inventory: res.data });
-    });
-  }
   render() {
     console.log("Dashbard State", this.state.inventory);
-    const items = this.state.inventory.map((e, i) => {
+    const items = this.props.inventory.map((e, i) => {
       return (
         <Product
           key={i}
