@@ -3,8 +3,8 @@ import axios from "axios";
 import "./Form.css";
 
 class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       imageurl: "",
       name: "",
@@ -37,7 +37,7 @@ class Form extends Component {
         price: this.state.price,
         imageurl: this.state.imageurl
       })
-      .then(res => console.log(res.data));
+      .then(this.props.getInventory());
     // this.setState({ imageurl: res.data }));
   };
 
@@ -47,11 +47,20 @@ class Form extends Component {
     return (
       <div className="form">
         Image URL:
-        <input onChange={e => this.handleURL(e.target.value)} />
+        <input
+          value={this.state.imageurl}
+          onChange={e => this.handleURL(e.target.value)}
+        />
         Product Name:
-        <input onChange={e => this.handleName(e.target.value)} />
+        <input
+          value={this.state.name}
+          onChange={e => this.handleName(e.target.value)}
+        />
         Price:
-        <input onChange={e => this.handlePrice(e.target.value)} />
+        <input
+          value={this.state.price}
+          onChange={e => this.handlePrice(e.target.value)}
+        />
         <div className="btncontr">
           <button
             onClick={() => {

@@ -6,12 +6,13 @@ import Form from "./component/Form/Form";
 import Dashboard from "./component/Dashboard/Dashboard";
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       inventory: []
     };
+    this.getInventory = this.getInventory.bind(this);
   }
   componentDidMount() {
     this.getInventory();
@@ -23,14 +24,17 @@ class App extends Component {
     });
   }
   render() {
+    // console.log("APP props", console.log(this.props));
     return (
       <div className="App">
         <Header />
-        <Form />
-        <Dashboard
-          inventory={this.state.inventory}
-          getInventory={this.getInventory}
-        />
+        <div className="page">
+          <Form getInventory={this.getInventory} />
+          <Dashboard
+            inventory={this.state.inventory}
+            getInventory={this.getInventory}
+          />
+        </div>
       </div>
     );
   }

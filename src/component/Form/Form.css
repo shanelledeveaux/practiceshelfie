@@ -1,12 +1,12 @@
 .form {
-  height: 30vh;
-  width: 20vh;
+  height: 55vh;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: purple;
+  background-color: rgb(143, 115, 133);
   padding: 5%;
-  color: white;
+  /* color: white; */
   /* align-content: flex-end; */
 }
 

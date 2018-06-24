@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(246, 242, 222);
+
+  background-color: rgb(227, 183, 156);
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 86vh;
 }
 
 .App-logo {
