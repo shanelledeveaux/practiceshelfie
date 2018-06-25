@@ -6,11 +6,17 @@
   background-color: rgb(227, 183, 156);
 }
 
+button {
+  background-color: rgb(194, 136, 124);
+  color: rgb(246, 242, 222);
+  border-radius: 2px;
+}
+
 .page {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 86vh;
+  height: 88vh;
 }
 
 .App-logo {

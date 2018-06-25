@@ -12,6 +12,7 @@ class Form extends Component {
     };
 
     this.initialState = this.state;
+    this.submitProducts = this.submitProducts.bind(this);
   }
 
   handleURL(imageurl) {

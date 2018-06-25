@@ -1,11 +1,12 @@
 .form {
-  height: 55vh;
+  height: 57vh;
   width: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: rgb(143, 115, 133);
   padding: 5%;
+  box-shadow: 1px 2px 5px 1px rgba(246, 242, 222, 0.514);
   /* color: white; */
   /* align-content: flex-end; */
 }
@@ -15,4 +16,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid rgb(246, 242, 222);
+  background: none;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(246, 242, 222);
+  font-size: 20px;
+}
+
+input:focus {
+  outline: none;
 }

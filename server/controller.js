@@ -30,8 +30,20 @@ const deleteProduct = (req, res, next) => {
     .catch(console.log);
 };
 
+const editProduct = (req, res, next) => {
+  const dbInstance = req.app.get("db");
+  const { id } = req.params;
+  const { productname, price, imageurl } = req.body;
+
+  dbInstance
+    .edit_product([productname, price, imageurl, id])
+    .then(response => res.status(200).send(response))
+    .catch(console.log);
+};
+
 module.exports = {
   getInventory,
   addProduct,
-  deleteProduct
+  deleteProduct,
+  editProduct
 };

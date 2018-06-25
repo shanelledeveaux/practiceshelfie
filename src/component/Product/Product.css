@@ -6,4 +6,5 @@ img {
   background-color: rgb(110, 68, 92);
   margin-bottom: 2%;
   width: 30vw;
+  box-shadow: 1px 2px 5px 1px rgba(246, 242, 222, 0.514);
 }

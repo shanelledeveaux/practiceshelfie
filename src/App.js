@@ -10,7 +10,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      inventory: []
+      inventory: [],
+      editProd: ""
     };
     this.getInventory = this.getInventory.bind(this);
   }

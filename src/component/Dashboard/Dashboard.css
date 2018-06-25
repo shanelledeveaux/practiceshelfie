@@ -1,5 +1,6 @@
 .productwrap {
   background-color: rgb(143, 115, 133);
+  box-shadow: 1px 2px 5px 1px rgba(246, 242, 222, 0.514);
   height: 70vh;
   width: 40vw;
   overflow: scroll;
