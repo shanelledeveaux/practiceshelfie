@@ -14,6 +14,7 @@ massive(process.env.CONNECTION_STRING).then(dbInstance =>
 app.get("/api/inventory", mc.getInventory);
 app.post("/api/product", mc.addProduct);
 app.delete("/api/product/:id", mc.deleteProduct);
+app.put("/api/product/:id", mc.editProduct);
 
 const port = 3001;
 app.listen(port, () => {

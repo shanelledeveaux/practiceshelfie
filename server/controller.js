@@ -31,13 +31,15 @@ const deleteProduct = (req, res, next) => {
 };
 
 const editProduct = (req, res, next) => {
+  console.log(req.params);
+  console.log(req.body);
   const dbInstance = req.app.get("db");
   const { id } = req.params;
   const { productname, price, imageurl } = req.body;
 
   dbInstance
     .edit_product([productname, price, imageurl, id])
-    .then(response => res.status(200).send(response))
+    .then(response => console.log(response))
     .catch(console.log);
 };
 

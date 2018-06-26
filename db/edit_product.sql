@@ -1,3 +1,4 @@
 update shelfie
-set productname = $1, price = $2, imageurl = $3
-where id = $4
+set productname = $2, price = $3, imageurl = $4
+where id = $1;
+select * from shelfie
