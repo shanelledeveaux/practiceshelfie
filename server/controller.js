@@ -39,7 +39,7 @@ const editProduct = (req, res, next) => {
 
   dbInstance
     .edit_product([productname, price, imageurl, id])
-    .then(response => console.log(response))
+    .then(response => res.status(200).send(response))
     .catch(console.log);
 };
 
